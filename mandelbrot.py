@@ -17,7 +17,7 @@ def iterate(z0):
         count += 1
     return count
 
-def draw():
+def draw(img):
     for y in range(imgSize[1]):
         for x in range(imgSize[0]):
             re = reRange[0] + reStep * x
@@ -29,5 +29,5 @@ def draw():
             img.putpixel((x, y), (r, g, b))
 
 img = Image.new('RGB', imgSize)
-draw()
+draw(img)
 img.save('mandelbrot.png')
